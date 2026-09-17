@@ -18,14 +18,13 @@ class EmployeeHomeScreen extends StatefulWidget {
 class _EmployeeHomeScreenState extends State<EmployeeHomeScreen> {
   int selectedNavIndex = 0;
 
-  // Home content lives in its own widget (see HomeTab below),
-  // NOT the EmployeeHomeScreen itself.
   final List<Widget> _pages = const [
     HomeTab(),
     HistoryScreen(),
     HelpSupportPage(),
     ProfileScreen(),
     EditProfileScreen(),
+
   ];
 
   @override

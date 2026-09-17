@@ -1,4 +1,8 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
+import 'package:green_bin_employee/utils/app_colors.dart';
+import 'package:green_bin_employee/views/registration_screen.dart';
 
 import 'home_screen.dart';
 
@@ -195,6 +199,23 @@ class _EmployeeLoginScreenState extends State<EmployeeLoginScreen> {
                               ),
                               child: const Text('Login'),
                             ),
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              const Text("Don't have an account?"),
+                              TextButton(
+                                onPressed: () {
+                                  Navigator.push(
+                                    context,
+                                    MaterialPageRoute(builder: (context) => const RegistrationScreen()),
+                                  );
+                                  log('szxdcfvgbhnj');
+                                },
+                                child: const Text("Register", style: TextStyle(color: CardGreen, fontWeight: FontWeight.bold)),
+                              ),
+                            ],
                           ),
                         ],
                       ),
