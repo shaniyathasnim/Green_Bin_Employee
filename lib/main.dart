@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:green_bin_employee/views/splash_screen.dart';
 import 'package:provider/provider.dart';
 import 'providers/employee_provider.dart'; // adjust path to match your project structure
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
+void main()async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+
   runApp( const MyApp(),
   );
 
